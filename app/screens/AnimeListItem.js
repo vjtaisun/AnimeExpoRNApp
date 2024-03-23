@@ -26,33 +26,35 @@ const AnimeListItem = ({ item, onPress, isFavorite }) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: 8,
-    marginVertical:6,
+    flex: 1,
+    marginHorizontal: 2,
+    marginVertical: 2,
     elevation: 4,
-    borderRadius: 4,
+    borderRadius: 2,
     overflow: "hidden",
-    borderWidth:2,
-    borderColor:'black',
+    borderWidth: .6,
+    borderColor: "black",
+    backgroundColor: "black",
   },
   image: {
     width: "100%",
-    height: 150,
+    height: 240,
     resizeMode: "cover",
     justifyContent: "center",
     alignItems: "center",
   },
   overlay: {
     backgroundColor: "black",
-    justifyContent: "flex-start",
-    alignItems: "flex-start",
+    justifyContent: "center",
+    alignItems: "center",
     padding: 4,
   },
   title: {
-    color:'white',
+    color: "white",
     fontSize: 14,
     fontWeight: "bold",
     textAlign: "center",
-  }
+  },
 });
 
 export default AnimeListItem;

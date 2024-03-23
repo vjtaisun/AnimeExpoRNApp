@@ -99,9 +99,9 @@ const AnimeListScreen = () => {
         maxLength={20}
         inputContainer={{
           marginTop: 14,
-          marginBottom:8,
+          // marginBottom: 8,
           width: "90%",
-          marginHorizontal:20
+          marginHorizontal: 20,
         }}
         value={searchQuery}
         onChangeText={handleSearch}
@@ -112,6 +112,7 @@ const AnimeListScreen = () => {
           <ActivityIndicator size="large" color={"rgb(57,62,68)"} />
         ) : (
           <FlatList
+            numColumns={2}
             data={animeList}
             keyExtractor={(item) => item.mal_id.toString()}
             renderItem={renderItem}
@@ -133,6 +134,7 @@ const styles = StyleSheet.create({
   listContainer: {
     flex: 1,
     justifyContent: "center",
+    margin:8
   },
   searchInput: {
     padding: 10,

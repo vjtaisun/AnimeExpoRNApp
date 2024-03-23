@@ -29,31 +29,46 @@ const AnimeDetailScreen = ({ route }) => {
           resizeMode="cover"
         />
         <View style={styles.detailsContainer}>
-          <AppText style={styles.detailText} title={`${anime.background}`} />
-          <AppText
-            style={styles.detailText}
-            title={`Season: ${anime.season}`}
-          />
-          <AppText
-            style={styles.detailText}
-            title={`Popularity: ${anime.popularity}`}
-          />
-          <AppText style={styles.detailText} title={`Rank: ${anime.rank}`} />
-          <AppText style={styles.detailText} title={`Year: ${anime.year}`} />
-          <AppText
-            style={styles.detailText}
-            title={`Episodes: ${anime.episodes}`}
-          />
-          <AppText
-            style={styles.detailText}
-            title={`Rating: ${anime.rating}`}
-          />
+          {anime.background ? (
+            <AppText style={styles.detailText} title={`${anime.background}`} />
+          ) : null}
+          {anime.season ? (
+            <AppText
+              style={styles.detailText}
+              title={`Season: ${anime.season}`}
+            />
+          ) : null}
+
+          {anime.popularity ? (
+            <AppText
+              style={styles.detailText}
+              title={`Popularity: ${anime.popularity}`}
+            />
+          ) : null}
+
+          {anime.rank ? (
+            <AppText style={styles.detailText} title={`Rank: ${anime.rank}`} />
+          ) : null}
+          {anime.year ? (
+            <AppText style={styles.detailText} title={`Year: ${anime.year}`} />
+          ) : null}
+          {anime.episodes ? (
+            <AppText
+              style={styles.detailText}
+              title={`Episodes: ${anime.episodes}`}
+            />
+          ) : null}
+          {anime.rating ? (
+            <AppText
+              style={styles.detailText}
+              title={`Rating: ${anime.rating}`}
+            />
+          ) : null}
+          
         </View>
         <AppButton
           style={styles.favButton}
-          title={
-            isFavorite ? AppStrings.FAVOURITE : AppStrings.MARK_FAVOURITE
-          }
+          title={isFavorite ? AppStrings.FAVOURITE : AppStrings.MARK_FAVOURITE}
           onPress={handleToggleFavorite}
         />
       </ScrollView>
@@ -65,13 +80,14 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     alignItems: "center",
     backgroundColor: "#fff",
+    marginBottom:8
   },
   image: {
     width: "100%",
-    height: 200,
+    height: 300,
   },
   detailsContainer: {
-    padding: 20,
+    padding: 8,
     width: "100%",
   },
   title: {
