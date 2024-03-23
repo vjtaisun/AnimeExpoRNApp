@@ -26,13 +26,13 @@ To run Anime App on your local machine, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/anime-app.git
+   https://github.com/vjtaisun/AnimeExpoRNApp.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd anime-app
+   cd AnimeExpoRNApp
    ```
 
 3. Install dependencies:
