@@ -109,6 +109,13 @@ Anime App utilizes several third-party libraries to extend functionality and str
 
 These libraries were chosen based on their popularity, reliability, and suitability for the requirements of the Anime App.
 
+## If I had more time
+- **Splash Screen**: Would have worked on splash screen.
+- **Other Changes**:
+   1. Search button inside header instead to make it more UI/UX friednly
+   2. Show Favourite in list for each show.
+   3. Design UI/UX of Show details page.
+   4. Pagination in List Screen
 
 ## Contributing
 
