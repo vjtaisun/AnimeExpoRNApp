@@ -71,9 +71,7 @@ Anime App offers the following features:
 
 ## Screenshots
 
-![Introduction Screen](/screenshots/introduction.jpeg)
-![Anime List Screen](/screenshots/anime_list.jpeg)
-![Anime Detail Screen](/screenshots/anime_detail.jpeg)
+![Introduction Screen](/screenshots/introduction.jpeg) ![Anime List Screen](/screenshots/anime_list.jpeg) ![Anime Detail Screen](/screenshots/anime_detail.jpeg)
 
 
 ## Code Structure
