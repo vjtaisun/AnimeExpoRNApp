@@ -9,6 +9,9 @@ Welcome to Anime App, your ultimate destination for exploring your favorite anim
 - [Usage](#usage)
 - [Features](#features)
 - [Screenshots](#screenshots)
+- [Code Structure](#code-structure)
+- [Design Patterns](#design-patterns)
+- [Libraries Used](#libraries-used)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -71,6 +74,41 @@ Anime App offers the following features:
 ![Introduction Screen](/screenshots/introduction.jpeg)
 ![Anime List Screen](/screenshots/anime_list.jpeg)
 ![Anime Detail Screen](/screenshots/anime_detail.jpeg)
+
+
+## Code Structure
+
+The codebase of Anime App follows a modular and organized structure to promote readability, maintainability, and scalability. Here's an overview of the main directories and files:
+
+- **components**: Contains reusable React components used throughout the app.
+- **navigation**: Manages navigation within the app using React Navigation.
+- **screens**: Contains individual screen components representing different screens of the app, such as the introduction screen, anime list screen, and anime detail screen.
+- **assets**: Stores static assets, such as images and fonts, used in the app.
+- **redux**: Manages application state using Redux, including actions, reducers, and store configuration.
+- **utils**: Houses utility functions and helper modules used across the app.
+- **App.js**: Entry point of the application, responsible for setting up the navigation and Redux store.
+
+## Design Patterns
+
+Anime App incorporates several design patterns to enhance code quality, maintainability, and performance:
+
+- **Component-based Architecture**: The app follows a component-based architecture, where UI elements are encapsulated into reusable and composable components. This promotes code reuse and modularity.
+- **Redux for State Management**: Redux is used for managing application state, ensuring a single source of truth and predictable state changes across the app.
+- **Container-Component Pattern**: Screen components act as container components, responsible for connecting to the Redux store and passing state and actions to presentational components.
+- **Theming and Styling**: Consistent theming and styling are maintained throughout the app using a combination of React Native's StyleSheet API and global theme variables.
+
+## Libraries Used
+
+Anime App utilizes several third-party libraries to extend functionality and streamline development:
+
+- **React Navigation**: Provides routing and navigation functionality for navigating between different screens in the app.
+- **Redux**: Manages application state and enables predictable state management using a global store.
+- **Axios**: Handles HTTP requests and simplifies data fetching from external APIs.
+- **Expo**: Simplifies React Native development by providing tools and libraries for building, testing, and deploying apps.
+- **React Native Elements**: Offers a library of customizable UI components to enhance the visual appeal and usability of the app.
+
+These libraries were chosen based on their popularity, reliability, and suitability for the requirements of the Anime App.
+
 
 ## Contributing
 
