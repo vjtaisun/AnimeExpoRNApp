@@ -10,7 +10,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { fetchAnimeListAPI } from "../apis/api";
 import AnimeListItem from "./AnimeListItem";
-import { Header, AppTextInput } from "../components";
+import { Header, AppTextInput, AppText } from "../components";
 import { AppStrings } from "../modules";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -110,7 +110,7 @@ const AnimeListScreen = () => {
       <View style={styles.listContainer}>
         {loading ? (
           <ActivityIndicator size="large" color={"rgb(57,62,68)"} />
-        ) : (
+        ) : animeList ? (
           <FlatList
             numColumns={2}
             data={animeList}
@@ -120,6 +120,8 @@ const AnimeListScreen = () => {
               <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
             }
           />
+        ) : (
+          <AppText style={styles.errorText} title={AppStrings.NO_SHOWS} />
         )}
       </View>
     </View>
@@ -134,7 +136,7 @@ const styles = StyleSheet.create({
   listContainer: {
     flex: 1,
     justifyContent: "center",
-    margin:8
+    margin: 8,
   },
   searchInput: {
     padding: 10,
@@ -142,6 +144,11 @@ const styles = StyleSheet.create({
     borderColor: "gray",
     borderWidth: 1,
     borderRadius: 5,
+  },
+  errorText: {
+    fontSize: 18,
+    marginBottom: 5,
+    textAlign:'center'
   },
 });
 
